@@ -1,0 +1,455 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring-Boot-REST-API",
+		"_postman_id": "d9294035-2c43-ef7e-5b5d-09c8e6d537b7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create-User",
+			"request": {
+				"url": "http://localhost:8089/api/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"users\":[\n\t\t{\n\t\t\t\"basicInfo\":{\n\t\t\t\t\t\"firstName\":\"Abhishek\",\n\t\t\t\t\t\"lastName\":\"Rathore\",\n\t\t\t\t\t\"age\":\"22\",\n\t\t\t\t\t\"dob\":\"19-11-1997\",\n\t\t\t\t\t\"preferedLanguage\":\"English\",\n\t\t\t\t\t\"middleName\":\"\",\n\t\t\t\t\t\"hobbies\":\"Playing Cricket\",\n\t\t\t\t\t\"emailAddress\":\"abhishek@gmail.com\",\n\t\t\t\t\t\"gender\":\"Male\"\n\t\t\t},\n\t\t\t\"addresses\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Office\",\n\t\t\t\t\t\"addressLine1\":\"M-1111\",\n\t\t\t\t\t\"addressLine2\":\"Gumnam Gali\",\n\t\t\t\t\t\"city\":\"Indore\",\n\t\t\t\t\t\"state\":\"M.P\",\n\t\t\t\t\t\"zipCode\":\"12345\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"phones\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Home\",\n\t\t\t\t\t\"number\":\"1234567756\"\n\t\t\t\t}\t\n\t\t\t]\n\t\t}\t\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "8ee5c47f-3ea8-4068-8b22-48969aca36af",
+					"name": "Create-User",
+					"originalRequest": {
+						"url": "http://localhost:8089/api/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t{\n\t\t\t\"basicInfo\":{\n\t\t\t\t\t\"firstName\":\"Abhishek\",\n\t\t\t\t\t\"lastName\":\"Rathore\",\n\t\t\t\t\t\"age\":\"22\",\n\t\t\t\t\t\"dob\":\"19-11-1997\",\n\t\t\t\t\t\"preferedLanguage\":\"English\",\n\t\t\t\t\t\"middleName\":\"Null\",\n\t\t\t\t\t\"hobbies\":\"Playing Cricket\",\n\t\t\t\t\t\"emailAddress\":\"abhishek@gmail.com\",\n\t\t\t\t\t\"gender\":\"Male\"\n\t\t\t},\n\t\t\t\"addresses\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Office\",\n\t\t\t\t\t\"addressLine1\":\"M-123\",\n\t\t\t\t\t\"addressLine2\":\"Nalanda Parisar\",\n\t\t\t\t\t\"city\":\"Indore\",\n\t\t\t\t\t\"state\":\"M.P\",\n\t\t\t\t\t\"zipCode\":\"12345\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"phones\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Home\",\n\t\t\t\t\t\"number\":\"1234567756\"\n\t\t\t\t}\t\n\t\t\t]\n\t\t}\t\n\t]\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 11 Nov 2020 12:35:59 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "strick-transport-security",
+							"key": "strick-transport-security",
+							"value": "max-age=31536000; includeSubDomains",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 1380,
+					"body": "{\"message\":\"User[s] Created!\"}"
+				}
+			]
+		},
+		{
+			"name": "Get-users",
+			"request": {
+				"url": "http://localhost:8089/api/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"users\":[\n\t\t{\n\t\t\t\"basicInfo\":{\n\t\t\t\t\t\"firstName\":\"Abhishek\",\n\t\t\t\t\t\"lastName\":\"Rathore\",\n\t\t\t\t\t\"age\":\"22\",\n\t\t\t\t\t\"dob\":\"19-11-1997\",\n\t\t\t\t\t\"preferedLanguage\":\"English\",\n\t\t\t\t\t\"middleName\":\"Null\",\n\t\t\t\t\t\"hobbies\":\"Playing Cricket\",\n\t\t\t\t\t\"emailAddress\":\"abhishek@gmail.com\",\n\t\t\t\t\t\"gender\":\"Male\"\n\t\t\t},\n\t\t\t\"addresses\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Office\",\n\t\t\t\t\t\"addressLine1\":\"M-123\",\n\t\t\t\t\t\"addressLine2\":\"Nalanda Parisar\",\n\t\t\t\t\t\"city\":\"Indore\",\n\t\t\t\t\t\"state\":\"M.P\",\n\t\t\t\t\t\"zipCode\":\"12345\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"phones\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Home\",\n\t\t\t\t\t\"number\":\"1234567756\"\n\t\t\t\t}\t\n\t\t\t]\n\t\t}\t\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "f6d601d0-3387-4403-8749-76c50f3b0cd1",
+					"name": "Get-users",
+					"originalRequest": {
+						"url": "http://localhost:8089/api/users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t{\n\t\t\t\"basicInfo\":{\n\t\t\t\t\t\"firstName\":\"Abhishek\",\n\t\t\t\t\t\"lastName\":\"Rathore\",\n\t\t\t\t\t\"age\":\"22\",\n\t\t\t\t\t\"dob\":\"19-11-1997\",\n\t\t\t\t\t\"preferedLanguage\":\"English\",\n\t\t\t\t\t\"middleName\":\"Null\",\n\t\t\t\t\t\"hobbies\":\"Playing Cricket\",\n\t\t\t\t\t\"emailAddress\":\"abhishek@gmail.com\",\n\t\t\t\t\t\"gender\":\"Male\"\n\t\t\t},\n\t\t\t\"addresses\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Office\",\n\t\t\t\t\t\"addressLine1\":\"M-123\",\n\t\t\t\t\t\"addressLine2\":\"Nalanda Parisar\",\n\t\t\t\t\t\"city\":\"Indore\",\n\t\t\t\t\t\"state\":\"M.P\",\n\t\t\t\t\t\"zipCode\":\"12345\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"phones\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Home\",\n\t\t\t\t\t\"number\":\"1234567756\"\n\t\t\t\t}\t\n\t\t\t]\n\t\t}\t\n\t]\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 11 Nov 2020 12:56:20 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "strick-transport-security",
+							"key": "strick-transport-security",
+							"value": "max-age=31536000; includeSubDomains",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 345,
+					"body": "{\"users\":[{\"basicInfo\":{\"firstName\":\"Abhishek\",\"middleName\":\"Null\",\"lastName\":\"Rathore\",\"emailAddress\":\"abhishek@gmail.com\",\"age\":\"22\",\"gender\":\"Male\",\"dob\":\"19-11-1997\",\"preferedLanguage\":\"English\",\"hobbies\":\"Playing Cricket\"},\"addresses\":[{\"id\":2,\"type\":\"Office\",\"addressLine1\":\"M-123\",\"addressLine2\":\"Nalanda Parisar\",\"city\":\"Indore\",\"state\":\"M.P\",\"zipCode\":\"12345\"}],\"phones\":[{\"key\":3,\"type\":\"Home\",\"number\":\"1234567756\",\"primary\":false}]}]}"
+				},
+				{
+					"id": "378cb025-3d27-4244-ba4a-7370cfbe705a",
+					"name": "Get-users-Error",
+					"originalRequest": {
+						"url": "http://localhost:8089/api/users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t{\n\t\t\t\"basicInfo\":{\n\t\t\t\t\t\"firstName\":\"Abhishek\",\n\t\t\t\t\t\"lastName\":\"Rathore\",\n\t\t\t\t\t\"age\":\"22\",\n\t\t\t\t\t\"dob\":\"19-11-1997\",\n\t\t\t\t\t\"preferedLanguage\":\"English\",\n\t\t\t\t\t\"middleName\":\"Null\",\n\t\t\t\t\t\"hobbies\":\"Playing Cricket\",\n\t\t\t\t\t\"emailAddress\":\"abhishek@gmail.com\",\n\t\t\t\t\t\"gender\":\"Male\"\n\t\t\t},\n\t\t\t\"addresses\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Office\",\n\t\t\t\t\t\"addressLine1\":\"M-123\",\n\t\t\t\t\t\"addressLine2\":\"Nalanda Parisar\",\n\t\t\t\t\t\"city\":\"Indore\",\n\t\t\t\t\t\"state\":\"M.P\",\n\t\t\t\t\t\"zipCode\":\"12345\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"phones\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Home\",\n\t\t\t\t\t\"number\":\"1234567756\"\n\t\t\t\t}\t\n\t\t\t]\n\t\t}\t\n\t]\n}"
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 11 Nov 2020 14:34:13 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "strick-transport-security",
+							"key": "strick-transport-security",
+							"value": "max-age=31536000; includeSubDomains",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 45,
+					"body": "{\"errors\":[{\"code\":\"GENR001\",\"message\":\"User Not Found\"}]}"
+				}
+			]
+		},
+		{
+			"name": "Get-user",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8089/api/users?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"users\":[\n\t\t{\n\t\t\t\"basicInfo\":{\n\t\t\t\t\t\"firstName\":\"Abhishek\",\n\t\t\t\t\t\"lastName\":\"Rathore\",\n\t\t\t\t\t\"age\":\"22\",\n\t\t\t\t\t\"dob\":\"19-11-1997\",\n\t\t\t\t\t\"preferedLanguage\":\"English\",\n\t\t\t\t\t\"middleName\":\"Null\",\n\t\t\t\t\t\"hobbies\":\"Playing Cricket\",\n\t\t\t\t\t\"emailAddress\":\"abhishek@gmail.com\",\n\t\t\t\t\t\"gender\":\"Male\"\n\t\t\t},\n\t\t\t\"addresses\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Office\",\n\t\t\t\t\t\"addressLine1\":\"M-123\",\n\t\t\t\t\t\"addressLine2\":\"Nalanda Parisar\",\n\t\t\t\t\t\"city\":\"Indore\",\n\t\t\t\t\t\"state\":\"M.P\",\n\t\t\t\t\t\"zipCode\":\"12345\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"phones\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Home\",\n\t\t\t\t\t\"number\":\"1234567756\"\n\t\t\t\t}\t\n\t\t\t]\n\t\t}\t\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "6e2d1307-0efe-48fb-bdab-6f9a58934bec",
+					"name": "Get-user-Error",
+					"originalRequest": {
+						"url": {
+							"raw": "http://localhost:8089/api/users?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t{\n\t\t\t\"basicInfo\":{\n\t\t\t\t\t\"firstName\":\"Abhishek\",\n\t\t\t\t\t\"lastName\":\"Rathore\",\n\t\t\t\t\t\"age\":\"22\",\n\t\t\t\t\t\"dob\":\"19-11-1997\",\n\t\t\t\t\t\"preferedLanguage\":\"English\",\n\t\t\t\t\t\"middleName\":\"Null\",\n\t\t\t\t\t\"hobbies\":\"Playing Cricket\",\n\t\t\t\t\t\"emailAddress\":\"abhishek@gmail.com\",\n\t\t\t\t\t\"gender\":\"Male\"\n\t\t\t},\n\t\t\t\"addresses\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Office\",\n\t\t\t\t\t\"addressLine1\":\"M-123\",\n\t\t\t\t\t\"addressLine2\":\"Nalanda Parisar\",\n\t\t\t\t\t\"city\":\"Indore\",\n\t\t\t\t\t\"state\":\"M.P\",\n\t\t\t\t\t\"zipCode\":\"12345\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"phones\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Home\",\n\t\t\t\t\t\"number\":\"1234567756\"\n\t\t\t\t}\t\n\t\t\t]\n\t\t}\t\n\t]\n}"
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 11 Nov 2020 14:33:27 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "strick-transport-security",
+							"key": "strick-transport-security",
+							"value": "max-age=31536000; includeSubDomains",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 161,
+					"body": "{\"errors\":[{\"code\":\"GENR001\",\"message\":\"User Not Found\"}]}"
+				},
+				{
+					"id": "013d14ba-c588-4a12-a6b5-8a6bc6683a6f",
+					"name": "Get-user",
+					"originalRequest": {
+						"url": {
+							"raw": "http://localhost:8089/api/users?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t{\n\t\t\t\"basicInfo\":{\n\t\t\t\t\t\"firstName\":\"Abhishek\",\n\t\t\t\t\t\"lastName\":\"Rathore\",\n\t\t\t\t\t\"age\":\"22\",\n\t\t\t\t\t\"dob\":\"19-11-1997\",\n\t\t\t\t\t\"preferedLanguage\":\"English\",\n\t\t\t\t\t\"middleName\":\"Null\",\n\t\t\t\t\t\"hobbies\":\"Playing Cricket\",\n\t\t\t\t\t\"emailAddress\":\"abhishek@gmail.com\",\n\t\t\t\t\t\"gender\":\"Male\"\n\t\t\t},\n\t\t\t\"addresses\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Office\",\n\t\t\t\t\t\"addressLine1\":\"M-123\",\n\t\t\t\t\t\"addressLine2\":\"Nalanda Parisar\",\n\t\t\t\t\t\"city\":\"Indore\",\n\t\t\t\t\t\"state\":\"M.P\",\n\t\t\t\t\t\"zipCode\":\"12345\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"phones\":[\n\t\t\t\t{\n\t\t\t\t\t\"type\":\"Home\",\n\t\t\t\t\t\"number\":\"1234567756\"\n\t\t\t\t}\t\n\t\t\t]\n\t\t}\t\n\t]\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 11 Nov 2020 14:38:21 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "strick-transport-security",
+							"key": "strick-transport-security",
+							"value": "max-age=31536000; includeSubDomains",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 48,
+					"body": "{\"users\":[{\"basicInfo\":{\"firstName\":\"Abhishek\",\"middleName\":\"\",\"lastName\":\"Rathore\",\"emailAddress\":\"abhishek@gmail.com\",\"age\":\"22\",\"gender\":\"Male\",\"dob\":\"19-11-1997\",\"preferedLanguage\":\"English\",\"hobbies\":\"Playing Cricket\"},\"addresses\":[{\"id\":2,\"type\":\"Office\",\"addressLine1\":\"M-1111\",\"addressLine2\":\"Gumnam Gali\",\"city\":\"Indore\",\"state\":\"M.P\",\"zipCode\":\"12345\"}],\"phones\":[{\"key\":3,\"type\":\"Home\",\"number\":\"1234567756\",\"primary\":false}]}]}"
+				}
+			]
+		}
+	]
+}
